@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kirtikausik & Abhijit – Wedding Invitation</title>
+    <meta
+      name="description"
+      content="We joyfully invite you to witness our wedding ceremony."
+    />
+    <meta property="og:title" content="Kirtikausik & Abhijit Wedding Invitation" />
+    <meta
+      property="og:description"
+      content="With love, we invite you to celebrate our wedding together."
+    />
+    <meta name="theme-color" content="#BAC7B6" />
+    <meta property="og:image" content="/img/image3D.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/img/image3D.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Great+Vibes&family=Lato:wght@300;400&family=Playfair+Display:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <style>
+    /* .families-pre,
+.families-sublabel{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:400;
+    letter-spacing:8px;
+    text-transform:uppercase;
+    color:#96777c;
+} */
+    /* .script,
+.families-heading,
+.venue-heading{
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+} */
+    .envelope-wrap {
+      position: relative;
+      cursor: pointer;
+      transition: all 0.8s ease;
+    }
+
+    .envelope-image {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .hero-section {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* .hero-invitation-image {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    } */
+
+    .schedule-image {
+      width: 100%;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .noble-section {
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .noble-image {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .families-heading {
+      font-size: clamp(3.5rem, 8vw, 5.5rem);
+      color: #e54887;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .venue-heading {
+      font-size: clamp(3rem, 7vw, 5rem);
+      color: #e54887;
+      line-height: 1.1;
+      font-weight: 400;
+    }
+    .families-names {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.2rem;
+      color: #8d7076;
+      font-weight: 400;
+      line-height: 1.8;
+    }
+    .families-heading,
+    .venue-heading {
+      font-family: "Great Vibes", cursive;
+      font-size: 5rem;
+      font-weight: 400;
+      color: #e54887;
+    }
+
+    .families-pre,
+    .families-sublabel {
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: 8px;
+      font-size: 2rem;
+      color: #96777c;
+    }
+
+    .families-names {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.2rem;
+      color: #8d7076;
+      line-height: 1.8;
+    }
+  </style>
+  <body>
+    <!-- ═══════════════════════════════════════════════
+     SCREEN 1: ENVELOPE OPENING
+═══════════════════════════════════════════════ -->
+    <section id="screen-envelope" class="screen active">
+      <div class="envelope-scene" id="envelopeScene" onclick="openEnvelope()">
+        <div class="envelope-wrap" id="envelopeWrap">
+
+    <img
+        src="img/image0D.png"
+        alt="Envelope"
+        class="envelope-image">
+
+</div>
+
+        <div class="invite-text-below" id="envelopeScene" onclick="openEnvelope()">
+          <p class="invited-script">You're Invited</p>
+          <p class="tap-open">TAP TO OPEN</p>
+        </div>
+
+        <!-- Floating petals -->
+        <div class="petals-container" id="petalsContainer"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     SCREEN 2: MAIN INVITATION
+═══════════════════════════════════════════════ -->
+    <section id="screen-invite" class="screen">
+      <!-- Audio -->
+      <audio id="bgMusic" loop>
+        <source
+          src="music/Islamic Wedding Invitation 2023 Project File Free Download After effects (1).mp3.mpeg"
+          type="audio/mpeg"
+        />
+      </audio>
+      <button
+        class="music-toggle"
+        id="musicToggle"
+        onclick="toggleMusic()"
+        title="Toggle Music"
+      >
+        <span id="musicIcon">♪</span>
+      </button>
+
+      <!-- ─── HERO ─── -->
+      <div class="hero-section" id="heroSection">
+        <div class="hero-hearts-top" id="heroHeartsTop"></div>
+        <div class="hero-hearts" id="heroHearts"></div>
+        <img
+          src="img/image1D.jpeg"
+          alt="Wedding Invitation"
+          class="hero-invitation-image"
+        />
+      </div>
+
+      <!-- ─── SCRATCH REVEAL ─── -->
+      <div class="scratch-section">
+        <p class="scratch-label">Reveal the wedding date ✦</p>
+
+        <div class="scratch-container">
+          <div class="scratch-reveal-text" id="scratchRevealText">
+            <span class="revealed-date">26 June 2026</span>
+          </div>
+          <canvas id="scratchCanvas" width="340" height="90"></canvas>
+        </div>
+
+        <p class="scratch-hint" id="scratchHint">
+          Scratch to reveal the wedding date
+        </p>
+
+        <!-- Countdown (shown after scratch) -->
+        <div class="countdown-wrap" id="countdownWrap">
+          <p class="countdown-label">COUNTDOWN TILL 26 JUNE 2026</p>
+          <div class="countdown-grid">
+            <div class="count-unit">
+              <span class="count-num" id="cDays">00</span
+              ><span class="count-lbl">Days</span>
+            </div>
+            <div class="count-unit">
+              <span class="count-num" id="cHours">00</span
+              ><span class="count-lbl">Hours</span>
+            </div>
+            <div class="count-unit">
+              <span class="count-num" id="cMins">00</span
+              ><span class="count-lbl">Minutes</span>
+            </div>
+            <div class="count-unit">
+              <span class="count-num" id="cSecs">00</span
+              ><span class="count-lbl">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── EVENT SCHEDULE ─── -->
+      <div class="schedule-section" id="scheduleSection" style="display: none">
+        <img src="img/image5D.jpeg" alt="Reception" class="schedule-image" />
+
+        <img src="img/image4D.jpeg" alt="Marriage" class="schedule-image" />
+      </div>
+
+      <!-- ─── NOBLE PRESENCE ─── -->
+      <div class="noble-section">
+        <img
+          src="img/image2D.png"
+          alt="Awaiting Your Noble Presence"
+          class="noble-image"
+        />
+      </div>
+
+      <!-- ─── FAMILIES ─── -->
+      <div class="families-section">
+        <p class="families-pre">WITH LOVE</p>
+        <h2 class="section-heading script families-heading">The Families</h2>
+        <div class="families-divider">♥</div>
+        <p class="families-sublabel">AWAITING YOUR PRESENCE</p>
+        <div class="families-names">
+          <p>(S/O K.Panneerselvam &amp; P.Mercy)</p>
+          <p>(D/O B.Kulanthai raj &amp; R.Philominal)</p>
+        </div>
+      </div>
+
+      <!-- ─── VENUE ─── -->
+      <div class="venue-section">
+        <h2 class="venue-heading script">Where we will Celebrate</h2>
+        <p class="venue-name">Maa Sarala Mandap, Nimapada</p>
+
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4101612.5263910545!2d80.6284325053446!3d22.567320361886345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1991570e80cd3f%3A0x616f0db716fa0d30!2sMaa%20Sarala%20Mandap!5e0!3m2!1sen!2sin!4v1780606998401!5m2!1sen!2sin" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" title="venue map" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <a
+          class="map-btn"
+          href="https://maps.app.goo.gl/jCqkKbkaHsYYWtAt7"
+          target="_blank"
+          rel="noopener"
+        >
+          View on Maps
+        </a>
+      </div>
+
+      <!-- ─── COUPLE PHOTO GALLERY ─── -->
+      <div class="gallery-section">
+        <div class="gallery-track" id="galleryTrack">
+          <div class="gallery-slide">
+            <div class="gallery-placeholder gp1">
+              <div class="photo-placeholder-inner">
+                <span class="photo-icon">💑</span>
+                <p>Together Forever</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-slide">
+            <div class="gallery-placeholder gp2">
+              <div class="photo-placeholder-inner">
+                <span class="photo-icon">💍</span>
+                <p>A New Beginning</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-slide">
+            <div class="gallery-placeholder gp3">
+              <div class="photo-placeholder-inner">
+                <span class="photo-icon">🌸</span>
+                <p>Love in Bloom</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-dots" id="galleryDots">
+          <span class="gdot active"></span>
+          <span class="gdot"></span>
+          <span class="gdot"></span>
+        </div>
+      </div>
+
+      <!-- ─── FOOTER ─── -->
+      <div class="footer-section">
+        <div class="footer-divider-line"></div>
+        <p class="footer-script script families-heading">
+          Kirtikausik &amp; Abhijit
+        </p>
+        <p class="footer-date">June 26, 2026</p>
+        <div class="footer-hearts">♥</div>
+        <p class="footer-made">Made with love</p>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
